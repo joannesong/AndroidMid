@@ -1,12 +1,17 @@
 package nyc.c4q.midtermday2;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.v7.view.menu.MenuView;
+import android.widget.TextView;
+
 
 /**
  * Created by joannesong on 12/6/17.
  */
+
 
 class AddingAsyncTask extends AsyncTask<Integer, Integer, Integer> {
     Context context;
@@ -15,8 +20,6 @@ class AddingAsyncTask extends AsyncTask<Integer, Integer, Integer> {
     public AddingAsyncTask(Context context) {
         this.context = context;
     }
-
-
 
     @Override
     protected void onPreExecute() {
@@ -46,4 +49,5 @@ class AddingAsyncTask extends AsyncTask<Integer, Integer, Integer> {
 
     Intent intent = new Intent(context , LoginActivity.this);
         context.startActivity(intent);
+
 }

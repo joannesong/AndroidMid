@@ -8,13 +8,16 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class LoopActivity extends AppCompatActivity {
-    TextView textView = (TextView) findViewById(R.id.text);
+
+    public TextView textView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loop);
 
+        textView = (TextView) findViewById(R.id.text);
 
     }
 
