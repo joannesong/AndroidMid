@@ -3,6 +3,8 @@ package nyc.c4q.midtermday2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -56,6 +58,16 @@ public class MainFragment extends Fragment {
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(numberAdapter);
 
+        MultiplyBy10Fragment nextFragment = new MultiplyBy10Fragment();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        Bundle bundle = new Bundle();
+        bundle.putString("number", null);
+        //the number from the recyclerview should be in this bundle
+        nextFragment.setArguments(bundle);
+        fragmentTransaction.replace(R.id.fragmentContainer, nextFragment);
+        fragmentTransaction.addToBackStack("next");
+        fragmentTransaction.commit();
 
         return rootView;
 
