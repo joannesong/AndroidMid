@@ -39,7 +39,7 @@ public class LoopActivity extends AppCompatActivity {
         @Override
         protected Integer doInBackground(Integer... integers) {
 
-            for (int i = 0; i <100000 ; i++) {
+            for (int i = integers[0]; i <100000 ; i++) {
                 publishProgress(i);
             }
 
@@ -58,10 +58,12 @@ public class LoopActivity extends AppCompatActivity {
             super.onPostExecute(integer);
 
             textView.setText("Loops completed: " + integer);
+
+
+            Intent intent = new Intent(context, LoginActivity.class);
+            context.startActivity(intent);
         }
 
-        Intent intent = new Intent(context, LoginActivity.this);
-        context.startActivity(intent);
     }
 
 }
