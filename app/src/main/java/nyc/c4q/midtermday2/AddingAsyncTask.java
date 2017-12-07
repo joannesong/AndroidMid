@@ -47,7 +47,7 @@ class AddingAsyncTask extends AsyncTask<Integer, Integer, Integer> {
 
     }
 
-    Intent intent = new Intent(context , LoginActivity.this);
+    Intent intent = new Intent(context, LoginActivity.this);
         context.startActivity(intent);
 
 }

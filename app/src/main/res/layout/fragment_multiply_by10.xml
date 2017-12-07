@@ -2,10 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="nyc.c4q.midtermday2.controller.MultiplyBy10Fragment">
+    tools:context="nyc.c4q.midtermday2.MultiplyBy10Fragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/multiplytext"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />

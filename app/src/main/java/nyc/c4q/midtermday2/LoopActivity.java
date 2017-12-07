@@ -60,7 +60,7 @@ public class LoopActivity extends AppCompatActivity {
             textView.setText("Loops completed: " + integer);
         }
 
-        Intent intent = new Intent(context , LoginActivity.this);
+        Intent intent = new Intent(context, LoginActivity.this);
         context.startActivity(intent);
     }
 
